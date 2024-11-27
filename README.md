@@ -8,10 +8,18 @@ When executed, it opens the file explorer at the location of the file path assoc
 The script determines the operating system (Linux, Windows) and uses appropriate system commands to open the file explorer.
 Note: macOS is not supported in this version.
 
+선택된 "Read" 노드의 파일 경로에 맞는 파일 탐색기를 엽니다.
+운영 체제(Linux, Windows)를 감지하여 적합한 시스템 명령어를 사용해 파일 탐색기를 실행합니다.
+참고: 현재 macOS는 지원되지 않습니다.
+
 ### set_read_node_path():
 When executed, it automatically creates "Read" nodes based on the file path and frame range of selected "Write" nodes.
 If the "Write" node has a sequence of images (e.g., PNG, EXR, JPG), it will create a Read node for that sequence, automatically setting the first and last frames.
 If the "Write" node points to a video (e.g., MOV), a Read node is created with that file.
+
+선택된 "Write" 노드에 따라 자동으로 "Read" 노드를 생성합니다.
+"Write" 노드가 이미지 시퀀스(예: PNG, EXR, JPG)를 가리키고 있으면, 해당 시퀀스를 위한 "Read" 노드를 생성하고, 첫 번째와 마지막 프레임을 자동으로 설정합니다.
+"Write" 노드가 비디오 파일(예: MOV)을 가리키고 있으면, 해당 비디오에 대한 "Read" 노드를 생성합니다.
 
 ## Usage
 1. Select one or more "Read" nodes in Nuke.
